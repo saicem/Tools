@@ -1,21 +1,24 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+﻿// <copyright file="NoticeParser.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Jwc.Parsers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
     public static class NoticeParser
     {
         /// <summary>
-        /// 从单条考试消息中提取实体类
+        /// 从单条考试消息中提取实体类.
         /// </summary>
-        /// <param name="notice">考试消息</param>
-        /// <returns>考试消息的实体类</returns>
-        //private static Exam GetExamList(string notice)
-        //{
+        /// <returns>考试消息的实体类.</returns>
+        // private static Exam GetExamList(string notice)
+        // {
         //    var match = Regex.Match(notice, "\\s(.+?)&nbsp;&nbsp;(.+?)&nbsp;&nbsp;考试临近请提前做好准备,考试时间:(.+?)&nbsp;&nbsp;,考试地点:(.+?)(?:\n)");
         //    return new Exam(match.Groups[1].Value, match.Groups[2].Value, match.Groups[3].Value, match.Groups[4].Value);
-        //}
+        // }
 
         /// <summary>
         /// 得到消息列表，一般为考试信息。
@@ -32,8 +35,8 @@ namespace Jwc.Parsers
                 List<string> noticeLs = (from Match notice in notices select notice.Groups[1].Value).ToList();
                 return string.Join("\n", noticeLs);
             }
+
             return null;
         }
-
     }
 }

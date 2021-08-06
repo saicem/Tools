@@ -9,7 +9,7 @@ namespace Tools
         public int Timeout { get; }
         private Queue<T> Messages { get; }
 
-        private Timer timer;
+        private readonly Timer timer;
 
         public MsgQueue(int timeout)
         {

@@ -1,21 +1,28 @@
-﻿namespace Jwc.Models
+﻿// <copyright file="Exam.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Jwc.Models
 {
     /// <summary>
-    /// 教务处消息提醒中的考试消息
+    /// 教务处消息提醒中的考试消息.
     /// </summary>
     public class Exam
     {
-        public string Name { get; set; }
-        public string Course { get; set; }
-        public string Time { get; set; }
-        public string Place { get; set; }
-
-        public Exam(string Name, string Course, string Time, string Place)
+        public Exam(string name, string course, string time, string place)
         {
-            this.Name = Name;
-            this.Course = Course;
-            this.Time = Time;
-            this.Place = Place;
+            this.Name = name;
+            this.Course = course;
+            this.Time = time;
+            this.Place = place;
         }
+
+        public string Name { get; set; }
+
+        public string Course { get; set; }
+
+        public string Time { get; set; }
+
+        public string Place { get; set; }
     }
 }

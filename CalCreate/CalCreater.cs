@@ -21,7 +21,7 @@ namespace CalCreate
             sw.WriteLine("X-WR-CALNAME:课程表");//自定义日历名称
             sw.WriteLine($"PRODID:{PRODID}");//
             //sw.WriteLine("CALSCALE:GREGORIAN");
-            sw.WriteLine("METHOD:PUBLISH"); // TODO 什么意思
+            sw.WriteLine("METHOD:PUBLISH");
             foreach (var item in eventList)
             {
                 WriteVevent(sw, item);
@@ -34,7 +34,7 @@ namespace CalCreate
         {
             // TODO utc 时区设置
             sw.WriteLine("BEGIN:VEVENT");
-            sw.WriteLine($"UID:{vevent.UID}"); // 19970610T172345Z-AF23B2@example.com
+            sw.WriteLine($"UID:{vevent.UID}");
             sw.WriteLine($"SUMMARY:{vevent.SUMMARY}");
             sw.WriteLine($"LOCATION:{vevent.LOCATION}");
             sw.WriteLine($"DESCRIPTION:{vevent.DESCRIPTION}");

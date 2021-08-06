@@ -1,9 +1,13 @@
-﻿using Jwc.Models;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
+﻿// <copyright file="GradeParser.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Jwc.Parsers
 {
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+    using Jwc.Models;
+
     public static class GradeParser
     {
         public static string GetSnkey(string text)
@@ -13,10 +17,10 @@ namespace Jwc.Parsers
         }
 
         /// <summary>
-        /// 得到成绩的详细信息
+        /// 得到成绩的详细信息.
         /// </summary>
-        /// <param name="html">成绩页面的html</param>
-        /// <returns>包含成绩信息的列表</returns>
+        /// <param name="html">成绩页面的html.</param>
+        /// <returns>包含成绩信息的列表.</returns>
         public static List<Grade> GetGradeList(string html)
         {
             List<Grade> gradeLs = new();
@@ -28,6 +32,7 @@ namespace Jwc.Parsers
                 var tds = RegexHtml.GetTagContentsEmpty(tr, "td");
                 gradeLs.Add(new Grade(tds));
             }
+
             return gradeLs;
         }
     }

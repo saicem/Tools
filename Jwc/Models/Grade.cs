@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿// <copyright file="Grade.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Jwc.Models
 {
+    using System.Collections.Generic;
+
     /// <summary>
     /// 学年学期
     /// 课程代码
@@ -16,68 +20,12 @@ namespace Jwc.Models
     /// 考试状态
     /// 成绩类型
     /// 是否重修
-    /// 学分绩点
+    /// 学分绩点.
     /// </summary>
     public class Grade
     {
         /// <summary>
-        /// 学年学期
-        /// </summary>
-        public string YearSemester { get; set; }
-        /// <summary>
-        /// 课程代码
-        /// </summary>
-        public string CourseCode { get; set; }
-        /// <summary>
-        /// 课程名称
-        /// </summary>
-        public string CourseName { get; set; }
-        /// <summary>
-        /// 成绩课程性质
-        /// </summary>
-        public string PropertyCourse { get; set; }
-        /// <summary>
-        /// 毕业课程性质
-        /// </summary>
-        public string PropertyGraduation { get; set; }
-        /// <summary>
-        /// 学分
-        /// </summary>
-        public string Credit { get; set; }
-        /// <summary>
-        /// 总评成绩
-        /// </summary>
-        public string MarkTotal { get; set; }
-        /// <summary>
-        /// 成绩审核属性
-        /// </summary>
-        public string PropertyExamin { get; set; }
-        /// <summary>
-        /// 最高成绩
-        /// </summary>
-        public string MarkTop { get; set; }
-        /// <summary>
-        /// 首次成绩
-        /// </summary>
-        public string MarkFirst { get; set; }
-        /// <summary>
-        /// 考试状态
-        /// </summary>
-        public string ExamStatus { get; set; }
-        /// <summary>
-        /// 成绩类型
-        /// </summary>
-        public string GradeType { get; set; }
-        /// <summary>
-        /// 是否重修
-        /// </summary>
-        public string IsAgain { get; set; }
-        /// <summary>
-        /// 学分绩点
-        /// </summary>
-        public string GPA { get; set; }
-
-        /// <summary>
+        /// Initializes a new instance of the <see cref="Grade"/> class.
         /// 学年学期
         /// 课程代码
         /// 课程名称
@@ -91,44 +39,56 @@ namespace Jwc.Models
         /// 考试状态
         /// 成绩类型
         /// 是否重修
-        /// 学分绩点
+        /// 学分绩点.
         /// </summary>
-        /// <param name="YearSemester">学年学期</param>
-        /// <param name="CourseCode">课程代码</param>
-        /// <param name="CourseName">课程名称</param>
-        /// <param name="PropertyCourse">成绩课程性质</param>
-        /// <param name="PropertyGraduation">毕业课程性质</param>
-        /// <param name="Credit">学分</param>
-        /// <param name="MarkTotal">总评成绩</param>
-        /// <param name="PropertyExamin">成绩审核属性</param>
-        /// <param name="MarkTop">最高成绩</param>
-        /// <param name="MarkFirst">首次成绩</param>
-        /// <param name="ExamStatus">考试状态</param>
-        /// <param name="GradeType">成绩类型</param>
-        /// <param name="IsAgain">是否重修</param>
-        /// <param name="GPA">学分绩点</param>
-        public Grade(string YearSemester, string CourseCode,string CourseName, 
-            string PropertyCourse, string PropertyGraduation, string Credit, string MarkTotal,
-            string PropertyExamin, string MarkTop, string MarkFirst, string ExamStatus,
-            string GradeType, string IsAgain, string GPA)
+        /// <param name="yearSemester">学年学期.</param>
+        /// <param name="courseCode">课程代码.</param>
+        /// <param name="courseName">课程名称.</param>
+        /// <param name="propertyCourse">成绩课程性质.</param>
+        /// <param name="propertyGraduation">毕业课程性质.</param>
+        /// <param name="credit">学分.</param>
+        /// <param name="markTotal">总评成绩.</param>
+        /// <param name="propertyExamin">成绩审核属性.</param>
+        /// <param name="markTop">最高成绩.</param>
+        /// <param name="markFirst">首次成绩.</param>
+        /// <param name="examStatus">考试状态.</param>
+        /// <param name="gradeType">成绩类型.</param>
+        /// <param name="isAgain">是否重修.</param>
+        /// <param name="gpa">学分绩点.</param>
+        public Grade(
+            string yearSemester,
+            string courseCode,
+            string courseName,
+            string propertyCourse,
+            string propertyGraduation,
+            string credit,
+            string markTotal,
+            string propertyExamin,
+            string markTop,
+            string markFirst,
+            string examStatus,
+            string gradeType,
+            string isAgain,
+            string gpa)
         {
-            this.YearSemester = YearSemester;
-            this.CourseCode = CourseCode;
-            this.CourseName = CourseName;
-            this.PropertyCourse = PropertyCourse;
-            this.PropertyGraduation = PropertyGraduation;
-            this.Credit = Credit;
-            this.MarkTotal = MarkTotal;
-            this.PropertyExamin = PropertyExamin;
-            this.MarkTop = MarkTop;
-            this.MarkFirst = MarkFirst;
-            this.ExamStatus = ExamStatus;
-            this.GradeType = GradeType;
-            this.IsAgain = IsAgain;
-            this.GPA = GPA;
+            this.YearSemester = yearSemester;
+            this.CourseCode = courseCode;
+            this.CourseName = courseName;
+            this.PropertyCourse = propertyCourse;
+            this.PropertyGraduation = propertyGraduation;
+            this.Credit = credit;
+            this.MarkTotal = markTotal;
+            this.PropertyExamin = propertyExamin;
+            this.MarkTop = markTop;
+            this.MarkFirst = markFirst;
+            this.ExamStatus = examStatus;
+            this.GradeType = gradeType;
+            this.IsAgain = isAgain;
+            this.GPA = gpa;
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Grade"/> class.
         /// 学年学期
         /// 课程代码
         /// 课程名称
@@ -142,25 +102,95 @@ namespace Jwc.Models
         /// 考试状态
         /// 成绩类型
         /// 是否重修
-        /// 学分绩点
+        /// 学分绩点.
         /// </summary>
-        /// <param name="ls">按顺序写入</param>
+        /// <param name="ls">按顺序写入.</param>
         public Grade(List<string> ls)
         {
-            YearSemester = ls[0];
-            CourseCode = ls[1];
-            CourseName = ls[2];
-            PropertyCourse = ls[3];
-            PropertyGraduation = ls[4];
-            Credit = ls[5];
-            MarkTotal = ls[6];
-            PropertyExamin = ls[7];
-            MarkTop = ls[8];
-            MarkFirst = ls[9];
-            ExamStatus = ls[10];
-            GradeType = ls[11];
-            IsAgain = ls[12];
-            GPA = ls[13];
+            this.YearSemester = ls[0];
+            this.CourseCode = ls[1];
+            this.CourseName = ls[2];
+            this.PropertyCourse = ls[3];
+            this.PropertyGraduation = ls[4];
+            this.Credit = ls[5];
+            this.MarkTotal = ls[6];
+            this.PropertyExamin = ls[7];
+            this.MarkTop = ls[8];
+            this.MarkFirst = ls[9];
+            this.ExamStatus = ls[10];
+            this.GradeType = ls[11];
+            this.IsAgain = ls[12];
+            this.GPA = ls[13];
         }
+
+        /// <summary>
+        /// Gets or sets 学年学期.
+        /// </summary>
+        public string YearSemester { get; set; }
+
+        /// <summary>
+        /// Gets or sets 课程代码.
+        /// </summary>
+        public string CourseCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets 课程名称.
+        /// </summary>
+        public string CourseName { get; set; }
+
+        /// <summary>
+        /// Gets or sets 成绩课程性质.
+        /// </summary>
+        public string PropertyCourse { get; set; }
+
+        /// <summary>
+        /// Gets or sets 毕业课程性质.
+        /// </summary>
+        public string PropertyGraduation { get; set; }
+
+        /// <summary>
+        /// Gets or sets 学分.
+        /// </summary>
+        public string Credit { get; set; }
+
+        /// <summary>
+        /// Gets or sets 总评成绩.
+        /// </summary>
+        public string MarkTotal { get; set; }
+
+        /// <summary>
+        /// Gets or sets 成绩审核属性.
+        /// </summary>
+        public string PropertyExamin { get; set; }
+
+        /// <summary>
+        /// Gets or sets 最高成绩.
+        /// </summary>
+        public string MarkTop { get; set; }
+
+        /// <summary>
+        /// Gets or sets 首次成绩.
+        /// </summary>
+        public string MarkFirst { get; set; }
+
+        /// <summary>
+        /// Gets or sets 考试状态.
+        /// </summary>
+        public string ExamStatus { get; set; }
+
+        /// <summary>
+        /// Gets or sets 成绩类型.
+        /// </summary>
+        public string GradeType { get; set; }
+
+        /// <summary>
+        /// Gets or sets 是否重修.
+        /// </summary>
+        public string IsAgain { get; set; }
+
+        /// <summary>
+        /// Gets or sets 学分绩点.
+        /// </summary>
+        public string GPA { get; set; }
     }
 }
