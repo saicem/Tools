@@ -10,9 +10,9 @@ namespace Jwc
     using System.Text.RegularExpressions;
 
     /// <summary>
-    /// Use regular expression to get infomation.
+    /// use regular expression to get infomations.
     /// </summary>
-    internal static class RegexHtml
+    internal class RegexHtml
     {
         /// <summary>
         /// 匹配目标并验证.
@@ -102,7 +102,7 @@ namespace Jwc
         /// <summary>
         /// 清除所有空白符.
         /// </summary>
-        /// <param name="html">待清楚的文本.</param>
+        /// <param name="html">待清除的文本.</param>
         /// <returns>清楚后的文本.</returns>
         public static string ClearWhiteSpace(string html)
         {

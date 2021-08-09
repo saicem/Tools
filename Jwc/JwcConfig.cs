@@ -1,4 +1,4 @@
-﻿// <copyright file="Config.cs" company="PlaceholderCompany">
+﻿// <copyright file="JwcConfig.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -9,7 +9,7 @@ namespace Jwc
     /// <summary>
     /// The config of Jwc.
     /// </summary>
-    internal class Config
+    internal class JwcConfig
     {
         /// <summary>
         /// Gets the datetime of the first Monday of the term.
